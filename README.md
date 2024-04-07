@@ -36,6 +36,7 @@ kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # h
 1. Download the application
 ```
 wget https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 -O hey
+chmod +x hey
 ```
 
 2. Running the load test
