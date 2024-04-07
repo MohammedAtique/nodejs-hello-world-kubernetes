@@ -23,9 +23,13 @@ cd nodejs-hello-world-kubernetes/k8s
 3. Running the application
 ```
 kubectl apply -f deployment.yml # running the application
-kubectl apply -f service.yml # used to access the application
+kubectl apply -f service.yml # used to access the application on port 30001
 ```
-4. Metric server and autoscaling
+4. Check the application running or not
+```
+<ip>:30001 # ip of your worker node and also you can change the nodePort in service.yml to your desired one and use it
+```
+6. Metric server and autoscaling
 ```
 kubectl apply -f metric-server.yml # metric server use to get the metrics about the system helps in autoscaling
 kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # horizontal pod autoscale command 
@@ -41,5 +45,5 @@ chmod +x hey
 
 2. Running the load test
 ```
-hey -n 100000 -c 1000 http://<ip>:<port> # of your running application
+hey -n 100000 -c 1000 http://<ip>:30001 # ip of your running application ( worker node ) port: nodePort from service.yml
 ```
