@@ -22,6 +22,10 @@ kubectl apply -f service.yml # used to access the application on port 30001
 ```
 <ip>:30001 # ip of your worker node and also you can change the nodePort in service.yml to your desired one and use it
 ```
+5. Also you can check the running pods on worker node by running these commands
+```
+sudo crictl ps
+```
 6. Metric server and autoscaling
 ```
 kubectl apply -f metric-server.yml # metric server use to get the metrics about the system helps in autoscaling
