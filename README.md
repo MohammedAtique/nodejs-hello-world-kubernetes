@@ -1,13 +1,9 @@
 # Simple Hello-World App running with Kubernetes with Horizontal Pod Autoscaling (HPA)
 This is a simple Hello World app built with NodeJS.
 
-## Installation
-1. Run these commands to install the necessary tools
-```
-sudo apt update -y
-```
+## Installation Guide
 
-## Kubernetes Setup and Running Guides
+### Kubernetes Setup and Running Guides
 
 1. [Kubeadm Installation Guide](https://github.com/MohammedAtique072/kubestarter/blob/main/kubeadm_installation.md)
 
@@ -32,7 +28,7 @@ kubectl apply -f metric-server.yml # metric server use to get the metrics about 
 kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # horizontal pod autoscale command 
 ```
 
-## Load test to increase load on cpu to check autoscale works or not
+### Load test to increase load on cpu to check autoscale works or not
 
 1. Download the application
 ```
