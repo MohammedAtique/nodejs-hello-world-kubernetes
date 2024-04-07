@@ -26,6 +26,7 @@ kubectl apply -f deployment.yml # running the application
 kubectl apply -f service.yml # used to access the application on port 30001
 ```
 4. Check the application running or not
+   * Make sure port 30001 exposed in security group of your ec2 instance if you are using AWS
 ```
 <ip>:30001 # ip of your worker node and also you can change the nodePort in service.yml to your desired one and use it
 ```
