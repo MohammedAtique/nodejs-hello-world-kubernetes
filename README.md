@@ -31,6 +31,10 @@ sudo crictl ps
 kubectl apply -f metric-server.yml # metric server use to get the metrics about the system helps in autoscaling
 kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # horizontal pod autoscale command 
 ```
+7. Check metric API server running or not
+```
+kubectl top nodes # if it shows details about node and cpu like: 25% or something in percentage then it's running 
+```
 
 ### Load test to increase load on cpu to check autoscale works or not
 
