@@ -30,3 +30,15 @@ kubectl apply -f service.yml # used to access the application
 kubectl apply -f metric-server.yml # metric server use to get the metrics about the system helps in autoscaling
 kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # horizontal pod autoscale command 
 ```
+
+## Load test to increase load on cpu to check autoscale works or not
+
+1. Download the application
+```
+wget https://hey-release.s3.us-east-2.amazonaws.com/hey_linux_amd64 -O hey
+```
+
+2. Running the load test
+```
+hey -n 100000 -c 1000 http://<ip>:<port> # of your running application
+```
