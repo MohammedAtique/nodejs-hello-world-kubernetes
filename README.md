@@ -7,6 +7,8 @@ This is a simple Hello World app built with NodeJS.
 
 1. [Kubeadm Installation Guide](https://github.com/MohammedAtique072/kubestarter/blob/main/kubeadm_installation.md)
 
+#### All command from here should be run on master node
+
 2. Clone the repository
 ```
 git clone https://github.com/MohammedAtique072/nodejs-hello-world-kubernetes.git
