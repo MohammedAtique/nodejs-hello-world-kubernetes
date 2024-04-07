@@ -25,6 +25,7 @@ cd nodejs-hello-world-kubernetes/k8s
 kubectl apply -f deployment.yml # running the application
 kubectl apply -f service.yml # used to access the application
 ```
+4. Metric server and autoscaling
 ```
 kubectl apply -f metric-server.yml # metric server use to get the metrics about the system helps in autoscaling
 kubectl autoscale deployment my-nodejs-app --cpu-percent=25 --min=1 --max=10 # horizontal pod autoscale command 
